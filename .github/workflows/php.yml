@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build docker images
-      run: docker build -t local < Dockerfile
+      run: docker build -t local - < Dockerfile
     - name: Run tests
       run: docker run -it -v $PWD:/srv -w/srv local php hello.php
