@@ -15,4 +15,4 @@ jobs:
     - name: Build docker images
       run: docker build -t local - < Dockerfile
     - name: Run tests
-      run: docker run -t -v $PWD:/srv -w/srv local php hello.php
+      run: docker run -it -v $PWD:/srv -w/srv local php hello.php
