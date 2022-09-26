@@ -4,8 +4,9 @@ pull_request_rules:
       - author=dependabot[bot]
       - check-success=build
       - label=dependencies
-      - label=docker
-      - dependabot-dependency-name=php
+      - or:
+        - label=docker
+        - label=php
     actions:
       merge:
         method: merge
